@@ -2,6 +2,8 @@ from flask import Flask, url_for, request, json, Response, jsonify
 from flask_cors import CORS, cross_origin
 from Blind import movies_func
 
+from Blind import list_of_movies
+
 app = Flask(__name__)
 CORS(app)
 
@@ -25,6 +27,18 @@ def blindCheck(movie):
         "success": True,
         "message": result
     })
+
+@app.route('/api/getMovies/<team>', methods = ['GET'])
+def getAllMovies(team):
+    x = ""
+    for i in range(0, len(list_of_movies)):
+        if int(team) == i:
+            x = list_of_movies[i]
+    return jsonify({
+        "success": True,
+        "movie": x
+    })
+
 
 if __name__ == "__main__":
     app.run()

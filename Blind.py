@@ -2,17 +2,25 @@
 import time
 from LD import levenshtein_ratio_and_distance
 
+list_of_dialogues = [
+    "",
+    ""
+]
+
+list_of_movies = [
+    "CAPTAIN AMERICA CIVIL WAR",
+    "JUMANJI WELCOME TO THE JUNGLE",
+    "AVENGERS AGE OF ULTRON",
+    "ZINDAGI NA MILEGI DOBARA",
+    "YEH JAWANI HAI DEEWANI",
+    "SPIDER MAN FAR FROM HOME",
+    "THE DARK KNIGHT RISES",
+    "MISSION IMPOSSIBLE FALL OUT",
+    "DILWALE DULHANIA LE JAYENGE",
+    "YAMLA PAGLA DEEWANA PHIR SE"
+]
+
 def movies_func(input_guess):
-
-    list_of_dialogues = [
-        "",
-        ""
-    ]
-
-    list_of_movies = [
-        "The Avengers",
-        "Pulp Fiction"
-    ]
 
     # first = time.time()
     # input_guess = input('enter movie\n')
@@ -30,7 +38,7 @@ def movies_func(input_guess):
             # print(second)
             # return(second)
             flag = True
-            return "yep"
+            return i
 
     if not flag:
         print("nope")
