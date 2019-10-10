@@ -36,7 +36,7 @@ def levenshtein_ratio_and_distance(s, t, ratio_calc = False):
                                  distance[row-1][col-1] + cost)     # Cost of substitutions
     if ratio_calc == True:
         # Computation of the Levenshtein Distance Ratio
-        Ratio = ((len(s)+len(t)) - distance[row][col]) / (len(s)+len(t))
+        Ratio = (((len(s)+len(t)) - distance[row][col]) / (len(s)+len(t)) * 100)
         return Ratio
     else:
         # print(distance) # Uncomment if you want to see the matrix showing how the algorithm computes the cost of deletions,

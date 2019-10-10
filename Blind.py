@@ -17,7 +17,16 @@ list_of_movies = [
     "THE DARK KNIGHT RISES",
     "MISSION IMPOSSIBLE FALL OUT",
     "DILWALE DULHANIA LE JAYENGE",
-    "YAMLA PAGLA DEEWANA PHIR SE"
+    "YAMLA PAGLA DEEWANA PHIR SE",
+    "ANDAAZ APNA APNA", 
+    "AVENGERS INFINITY WAR",
+    "YESHWANT",
+    "OM SHANTI OM",
+    "SHOOTOUT AT WADALA",
+    "A WEDNESDAY",
+    "TAKEN",
+    "AVATAR",
+    "HARRY POTTER AND THE CHAMBER OF SECRETS"
 ]
 
 def movies_func(input_guess):
@@ -34,7 +43,7 @@ def movies_func(input_guess):
     flag = False
 
     for i in accuracies:
-        if i > 0.4:
+        if i > 0.2:
             # print(second)
             # return(second)
             flag = True
